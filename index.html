@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosala Gayan | Mechatronics Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <div class="logo">KOSALA <span>GAYAN</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-image">
+                <div class="img-outline">
+                    <img src="profile.jpeg" alt="Kosala Gayan">
+                </div>
+            </div>
+            <div class="hero-text">
+                <span class="greeting">Hello, I am</span>
+                <h1>Kosala Gayan</h1>
+                <p class="subtitle">Instructor @ University of Moratuwa | Mechatronics Engineer</p>
+                <div class="hero-tags">
+                    <span><i class="fas fa-award"></i> First Class Honors (3.80/4.00)</span>
+                </div>
+                <div class="cta-group">
+                    <button class="btn btn-primary" onclick="openCV()">
+                        <i class="fas fa-file-alt"></i> View CV
+                    </button>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-text">
+                <p>
+                    Highly motivated Mechanical Engineering graduate specialized in Mechatronics at the University of
+                    Moratuwa, Sri Lanka, with a strong foundation in Robotics, Machine Learning for computer vision,
+                    neural-network-based modeling, Multi-body dynamics, Control systems and currently serve as a graduate
+                    instructor for the same university while actively seeking PhD scholarship opportunities. My research
+                    interests include Robotics, Autonomous Systems, Industry 4.0, and AI-driven Mechatronic Systems.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3.80</span>
+                        <span class="stat-label">GPA</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1st</span>
+                        <span class="stat-label">Inventor Award</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Research/Patents</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="media-box" onclick="openVideo('PCV_demo.mp4')">
+                        <img src="fyp.png" alt="PCV Analyzer" class="card-thumb">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Design and development of a Novel vision-based PCV analyzer for efficient hematocrit monitoring in dengue patients</h3>
+                        <p>1st Place - Undergraduate Inventor 2025. Automated hematocrit detection.</p>
+                        <div class="card-buttons">
+                            <button class="btn btn-secondary btn-small" onclick="openVideo('PCV_demo.mp4')">
+                                <i class="fas fa-play"></i> Preview Full Video
+                            </button>
+                            <button class="btn btn-primary btn-small" onclick="openProject('pcv')">More Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="media-box">
+                        <img src="sem5_rebot.png" alt="Human Following Robot" class="card-thumb">
+                    </div>
+                    <div class="card-content">
+                        <h3>Design and Development of vision based Human Following Robot</h3>
+                        <p>Six-wheeled rocker-bogie suspension. Real-time detection via MediaPipe.</p>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary btn-small" onclick="openProject('robot')">More Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="media-box">
+                        <img src="taxi_robot.png" alt="Human Following Robot" class="card-thumb">
+                    </div>
+                    <div class="card-content">
+                        <h3>Miniature Autonomous Taxi Prototype Robot </h3>
+                        <p>This project involves designing and developing a miniature autonomous taxi robot that can transport a
+                             passenger to a selected destination using a predefined path</p>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary btn-small" onclick="openProject('minirobot')">More Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="media-box">
+                        <img src="sensor.png" alt="Scada system" class="card-thumb">
+                    </div>
+                    <div class="card-content">
+                        <h3>Design and Development of a Fundamental SCADA system </h3>
+                        <p>This project focuses on developing an IoT-based temperature monitoring
+                             and automatic fan control system that adjusts fan speed according to environmental temperature</p>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary btn-small" onclick="openProject('scada')">More Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="media-box">
+                        <img src="mems.png" alt="MEMS" class="card-thumb">
+                    </div>
+                    <div class="card-content">
+                        <h3>Design of Mems-Based Hybrid Piezoelectric-Thermoelectric Energy Harvester for Smart
+                            Wearable Devices</h3>
+                        <p>Designed a double S-shaped MEMS structure for vibration energy harvesting and integrated a
+                            thermoelectric arrays for thermal energy extraction.</p>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary btn-small" onclick="openProject('Mems')">More Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="media-box"; overflow: hidden;>
+                        <img src="hmi.png" alt="MEMS" class="card-thumb" >
+                    </div>
+                    <div class="card-content">
+                        <h3>Automated Lubricant Oil Dispensing System Project (Colombo International Container Terminals)</h3>
+                        <p>This project involves the development of a fully automated oil dispensing system using 
+                            PLC-HMI integration to improve accuracy and operational efficiency. The system incorporates 
+                            QR-coded work orders and barcode-based user verification for secure and traceable dispensing. 
+                            A closed-loop control mechanism is implemented using solenoid valves with weight-sensor feedback 
+                            to ensure precise oil measurement, while bidirectional communication between the PLC and HMI enables 
+                            real-time monitoring, control, and data visualization.</p>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary btn-small" onclick="openProject('lubricant')">More Details</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="project-card">
+                    <div class="media-box"; overflow: hidden;>
+                        <img src="fan.png" alt="MEMS" class="card-thumb" >
+                    </div>
+                    <div class="card-content">
+                        <h3>QC Inverter Fan Tester Project (Colombo International Container Terminals)</h3>
+                        <p>Developed a microcontroller-based inverter cooling fan testing device with PWM-based speed
+                            controlling.</p>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary btn-small" onclick="openProject('fan')">More Details</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+       
+
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Research & Patents</h2>
+            <div class="pub-container">
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-scroll"></i></div>
+                    <div>
+                        <h4>MERCon 2025 Publication</h4>
+                        <p>Design and manufacturing optimization of a highspeed pcv centrifuge machine.</p>
+                        <a href="https://doi.org/10.1109/MERCon67903.2025.11217024" target="_blank">View Paper</a>
+                    </div>
+                </div>
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-certificate"></i></div>
+                    <div>
+                        <h4>NIPO Patent (Pending)</h4>
+                        <p>Vision based pcv analyzer for hct detecting with a rotor for a medical centrifuge.</p>
+                        <span>App No: 14245</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Contact</h2>
+            
+            <div class="contact-info" style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: wrap; margin-top: 30px;">
+                
+                <div class="info-item" style="flex: 1; min-width: 200px; display: flex; flex-direction: column; align-items: center;">
+                    <div class="icon-box" style="margin-bottom: 15px;"><i class="fas fa-location-dot"></i></div>
+                    <h4>Address</h4>
+                    <p>No: 360/2, Ambagala, Horana, Sri Lanka</p>
+                </div>
+    
+                <div class="info-item" style="flex: 1; min-width: 200px; display: flex; flex-direction: column; align-items: center;">
+                    <div class="icon-box" style="margin-bottom: 15px;"><i class="fas fa-phone"></i></div>
+                    <h4>Call</h4>
+                    <p>+94 77 040 1823</p>
+                </div>
+    
+                <div class="info-item" style="flex: 1; min-width: 200px; display: flex; flex-direction: column; align-items: center;">
+                    <div class="icon-box" style="margin-bottom: 15px;"><i class="fas fa-envelope"></i></div>
+                    <h4>Email</h4>
+                    <p style="margin: 0;"><a href="mailto:kakgayan@gmail.com" class="contact-link">kakgayan@gmail.com</a></p>
+                    <p style="margin: 0;"><a href="mailto:gayankak.20@uom.lk" class="contact-link">gayankak.20@uom.lk</a></p>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content video-modal-content">
+            <div class="modal-header">
+                <h3>Project Preview</h3>
+                <span class="close" onclick="closeVideo()">&times;</span>
+            </div>
+            <div class="modal-body bg-black">
+                <video id="previewPlayer" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div id="cvModal" class="modal">
+        <div class="modal-content cv-modal-content">
+            <div class="modal-header">
+                <h3>Curriculum Vitae</h3>
+                <div class="header-actions">
+                    <a href="Kosala Gayan_CV.pdf" download class="download-link"><i class="fas fa-download"></i></a>
+                    <span class="close" onclick="closeCV()">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body cv-body">
+                <iframe src="Kosala Gayan_CV.pdf#view=FitH" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Project Details</h3>
+                <span class="close" onclick="closeProject()">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody" style="padding: 30px;"></div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-logo">KOSALA <span>GAYAN</span></div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/kosala-gayan-00787826b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/KAKGayan" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Kosala Gayan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Modal Control Functions
+        function openCV() {
+            document.getElementById("cvModal").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+        function closeCV() {
+            document.getElementById("cvModal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        function openVideo(videoSrc) {
+            const modal = document.getElementById("videoModal");
+            const player = document.getElementById("previewPlayer");
+            player.src = videoSrc;
+            modal.style.display = "block";
+            player.play();
+            document.body.style.overflow = "hidden";
+        }
+        function closeVideo() {
+            const modal = document.getElementById("videoModal");
+            const player = document.getElementById("previewPlayer");
+            player.pause();
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        const projectDetails = {
+    'pcv': {
+        title: "Design and development of a Novel vision-based PCV analyzer for efficient hematocrit monitoring in dengue patients",
+        content: `
+            <div class="project-description">
+                <p style="font-size: 1.1rem; margin-bottom: 20px; color: var(--text-main);">
+                    This project addresses the critical need for rapid and accurate hematocrit monitoring, 
+                    particularly in managing Dengue patients. By automating the traditional manual reading 
+                    process, this system reduces human error and streamlines clinical workflows through 
+                    real-time image processing and cloud-based data synchronization.
+                </p>
+            </div>
+
+            <h4 style="color: var(--accent); margin-bottom: 15px;">
+                <i class="fas fa-trophy"></i> 1st Place - Undergraduate Inventor of the Year 2025, Awarded by Institution of Engineers, Sri Lanka (IESL)
+            </h4>
+
+                <div>
+                    <h4>Technical Highlights</h4>
+                    <ul style="padding-left: 20px; margin-bottom: 20px;">
+                        <li><strong>Automated Vision:</strong> Image processing algorithms to calculate RBC percentage.</li>
+                        <li><strong>Precision Control:</strong> PID-tuned high-speed motor control for vibration-free operation.</li>
+                        <li><strong>Passive Isolation:</strong> Custom mechanical architecture to isolate high-frequency vibrations.</li>
+                        <li><strong>IoT Integration:</strong> Real-time data transfer to mobile applications for doctors.</li>
+                    </ul>
+                </div>
+                            <div class="project-gallery">
+                    <div style="margin-bottom: 15px;">
+                        <img src="pcv_hardware.png" alt="Final Prototype" style="width: 100%; border-radius: 8px; border: 1px solid var(--accent);">
+                        <p style="font-size: 0.8rem; text-align: center; color: var(--text-dim);">Fig 1: Final Integrated Prototype</p>
+                    </div>
+                    <div>
+                        <img src="flow.png" alt="Software Interface" style="width: 100%; border-radius: 8px; border: 1px solid var(--accent);">
+                        <p style="font-size: 0.8rem; text-align: center; color: var(--text-dim);">Fig 2: Detection Algorithm UI</p>
+                    </div>
+                   
+                </div>
+                 <h4 style="margin-top:20px;">Project Poster</h4>
+            <div style="margin-top:15px; width: 100%; height: 90vh; border: 1px solid var(--accent); border-radius: 8px; overflow: hidden;">
+                <object 
+                    data="Poster_Presentation_Group_35.pdf#view=FitH" 
+                    type="application/pdf" 
+                    width="100%" 
+                    height="100%">
+                    <p>Your browser does not support PDFs. 
+                    <a href="Poster_Presentation_Group_35.pdf">Download instead</a>.
+                    </p>
+                </object>
+            </div>
+        `
+    },
+    'robot': {
+        title: "Design and Development of vision based Human Following Robot",
+        content: `
+            <p>The project involves the design and development of a vision-based human-following robot for supermarket assistance, 
+                aimed at improving customer convenience by autonomously carrying items while following a user. The robot uses camera-based 
+                person detection and tracking with image-processing algorithms (MediaPipe and OpenCV) to identify and follow a person in real time, 
+                while a six-wheel rocker-bogie mobile platform ensures stability and the ability to move over small obstacles and uneven surfaces. 
+                The system integrates mechanical design, motion and dynamic analysis, embedded control using Raspberry Pi and Arduino, 
+                and both manual and autonomous control modes through a GUI, mobile app, and web interface, demonstrating a complete mechatronic solution 
+                for assistive service robotics in retail environments</p>
+            
+            <h4>Technical Highlights</h4>
+            <ul>
+                <li><strong>Autonomous Human Following:</strong> Vision-based tracking system for real-time human detection and adaptive following.</li>
+                <li><strong>Stable Mobility:</strong> 6-wheel rocker-bogie design ensures smooth movement over uneven terrain and small steps.</li>
+                <li><strong>Intelligent IoT-Enabled Control:</strong> App-based commands with remote monitoring and control through IoT integration.</li>
+            </ul>
+            <div style="margin-top: 15px;">
+                <img src="sem5_robot_design.png" alt="Design, FEA & Multibody Dynamics" style="width: 100%; border-radius: 8px; border: 5px solid var(--accent);">
+                <p style="font-size: 0.8rem; text-align: center; color: var(--text-dim);">Fig 1: Design, FEA & Multibody Dynamics  </p>
+            </div>
+            <h4 style="margin-top:20px;">Project Simulations</h4>
+            <h5 style="margin-top:20px;">Adams Multibody Dynamics Simulation</h5>
+            <div class="video-container" style="margin-top:15px; background:#000; border-radius:8px; overflow:hidden;">
+                <video controls style="width:100%; display:block;">
+                    <source src="Adams_kosala.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h5 style="margin-top:20px;">Ros2 Noetic Simulation</h5>
+            <div class="video-container" style="margin-top:15px; background:#000; border-radius:8px; overflow:hidden;">
+                <video controls style="width:100%; display:block;">
+                    <source src="ROS_kosala_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div style="margin-top:1px; display:flex; gap:5px;">
+                <a href="https://github.com/KAKGayan" target="_blank" class="btn btn-secondary btn-small">
+                    <i class="fab fa-github"></i> Mobile App, Web page, GUI
+                </a>
+
+            <div style="margin-top:25px; display:flex; gap:1px;">
+                <a href="Design_Project_final.pdf" download class="btn btn-primary btn-small">
+                    <i class="fas fa-download"></i> Download Report
+                </a>
+            </div>`
+            },
+    'minirobot': {
+    title: "Miniature Autonomous Taxi Prototype Robot",
+    content: `
+        <p>The robot follows a line-based track, detects obstacles, recognizes traffic signs, 
+            and makes navigation decisions automatically using computer vision techniques. 
+            A mobile application is used to select destinations and switch between manual and autonomous control modes. 
+            The system combines robot navigation, object detection, decision-making, 
+            and mobile-app control to demonstrate an intelligent autonomous vehicle prototype capable 
+            of operating in a structured environment.</p>
+        
+        <h4>Technical Highlights</h4>
+        <ul>
+            <li><strong>Mobile device-based application:</strong></li>
+            <li><strong>Manual Mode Control:</strong> The mobile app allows users to select destinations and switch between manual and autonomous control modes.</li>
+            <li><strong>Obstacle avoidance</strong></li>
+            <li><strong>Line following with decision making</strong></li>
+            <li><strong>Real-time destinantion & traffic sign detection</strong></li>
+
+<div style="margin-top: 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: flex-start;">
+    
+    <div style="flex: 1; min-width: 250px; max-width: 400px; display: flex; flex-direction: column; align-items: center;">
+        <img src="signs.png" 
+             alt="Signs to be detected" 
+             style="width: 100%; height: auto; border-radius: 8px; border: 3px solid var(--accent); object-fit: contain;">
+        <p style="font-size: 0.8rem; text-align: center; color: var(--text-dim); margin-top: 8px;">
+            Fig 1: Signs to be detected
+        </p>
+    </div>
+
+    <div style="flex: 1; min-width: 250px; max-width: 400px; display: flex; flex-direction: column; align-items: center;">
+        <img src="task.png" 
+             alt="Task to be detected" 
+             style="width: 100%; height: auto; border-radius: 8px; border: 3px solid var(--accent); object-fit: contain;">
+        <p style="font-size: 0.8rem; text-align: center; color: var(--text-dim); margin-top: 8px;">
+            Fig 2: Task to be performed
+        </p>
+    </div>
+
+</div>
+</div>
+        </ul>
+       
+        <h4 style="margin-top:20px;">Project Demonstration</h4>
+
+        <h5 style="margin-top:20px;">Sign Detection using Raspberry pi 4B+</h5>
+        <div class="video-container" style="margin-top:15px; background:#000; border-radius:8px; overflow:hidden; display: flex; justify-content: center;">
+            <video controls style="width: 100%; max-height: 70vh; display: block; object-fit: contain;">
+                <source src="sign_detection.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h5 style="margin-top:20px;">Line & Wall following Task</h5>
+        <div class="video-container" style="margin-top:15px; background:#000; border-radius:8px; overflow:hidden; display: flex; justify-content: center;">
+            <video controls style="width: 100%; max-height: 70vh; display: block; object-fit: contain;">
+                <source src="line.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        `
+},
+'scada': {
+        title: "Design and Development of a Fundamental SCADA system",
+        content: `
+
+                <div>
+                    <h4>Technical Highlights</h4>
+                    <ul style="padding-left: 20px; margin-bottom: 20px;">
+                        <li> Developed an IoT-based SCADA system using an ESP32 for continuous data acquisition, with
+                                            real-time and historical logs stored in a MySQL database..</li>
+                        <li> Implemented closed-loop fan speed control by real-time temperature feedback for stable indoor Temperature management</li>
+                    
+                    </ul>
+                </div>
+                
+                    <div style="margin-bottom: 15px;">
+                        <img src="sensor.png" alt="Sensor Readings" style="width: 100%; border-radius: 8px; border: 1px solid var(--accent);">
+                        <p style="font-size: 0.8rem; text-align: center; color: var(--text-dim);">Fig 1: Sensor Reading Dashboard and LED Control Panel</p>
+                    </div>
+                    <div>
+                        <img src="database.png" alt="Database" style="width: 100%; border-radius: 8px; border: 1px solid var(--accent);">
+                        <p style="font-size: 0.8rem; text-align: center; color: var(--text-dim);">Fig 2: Historical Data Recordings</p>
+                    </div>
+                     <div>
+                        <img src="Network.png" alt="Network Configuration" style="width: 100%; border-radius: 8px; border: 1px solid var(--accent);">
+                        <p style="font-size: 0.8rem; text-align: center; color: var(--text-dim);">Fig 3: Network Configuration of the system</p>
+                    </div>
+                   
+            
+        `
+    },
+    'Mems': {
+        title: "Design of Mems-Based Hybrid Piezoelectric-Thermoelectric Energy Harvester for Smart Wearable Devices",
+        // We store images as an array now
+        slides: [
+            { src: 'vibration.png', caption: 'Fig 1: Piezoelectric effect' },
+            { src: 'voltage.png', caption: 'Fig 2: AC voltage generation' },
+            { src: 'TEG.png', caption: 'Fig 3: TEG cell arrangement' },
+            { src: 'teg_results.png', caption: 'Fig 4: Thermal Simulation' },
+            { src: 'teg_vol.png', caption: 'Fig 5: Voltage Output' },
+            { src: 'mems.png', caption: 'Fig 6: Final Design' }
+        ],
+        content: `
+            <div class="slideshow-wrapper" style="max-width: 600px; margin: 0 auto 20px auto; position: relative; background: #000; border-radius: 12px; border: 2px solid var(--accent); overflow: hidden;">
+                <div style="padding: 10px; text-align: center; min-height: 350px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <img id="active-slide-img" src="" style="max-width: 100%; max-height: 500px; object-fit: contain;">
+                    <p id="active-slide-caption" style="margin-top: 15px; color: #fff; font-size: 0.9rem;"></p>
+                </div>
+                <button onclick="moveSlide(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(100, 255, 218, 0.2); border: 1px solid var(--accent); color: var(--accent); font-size: 20px; cursor: pointer; border-radius: 50%; width: 40px; height: 40px;">&#10094;</button>
+                <button onclick="moveSlide(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(100, 255, 218, 0.2); border: 1px solid var(--accent); color: var(--accent); font-size: 20px; cursor: pointer; border-radius: 50%; width: 40px; height: 40px;">&#10095;</button>
+                <div id="slide-counter" style="position: absolute; bottom: 10px; right: 15px; background: rgba(0,0,0,0.7); color: var(--accent); padding: 2px 10px; border-radius: 20px; font-size: 0.75rem;"></div>
+            </div>
+        `
+    },
+    'lubricant': {
+        title: "Automated Lubricant Oil Dispensing System Project (Colombo International Container Terminals)",
+        // We store images as an array now
+        slides: [
+            { src: 'pic1.png', caption: 'Fig 1: Project Description' },
+            { src: 'pic2.png', caption: 'Fig 2: Workflow Diagram' },
+            { src: 'pic3.png', caption: 'Fig 3: HMI interfaces' },
+            { src: 'pic4.png', caption: 'Fig 4: HMI interfaces' },
+        ],
+        content: `
+            <div class="slideshow-wrapper" style="max-width: 600px; margin: 0 auto 20px auto; position: relative; background: #000; border-radius: 12px; border: 2px solid var(--accent); overflow: hidden;">
+                <div style="padding: 10px; text-align: center; min-height: 350px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <img id="active-slide-img" src="" style="max-width: 100%; max-height: 500px; object-fit: contain;">
+                    <p id="active-slide-caption" style="margin-top: 15px; color: #fff; font-size: 0.9rem;"></p>
+                </div>
+                <button onclick="moveSlide(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(100, 255, 218, 0.2); border: 1px solid var(--accent); color: var(--accent); font-size: 20px; cursor: pointer; border-radius: 50%; width: 40px; height: 40px;">&#10094;</button>
+                <button onclick="moveSlide(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(100, 255, 218, 0.2); border: 1px solid var(--accent); color: var(--accent); font-size: 20px; cursor: pointer; border-radius: 50%; width: 40px; height: 40px;">&#10095;</button>
+                <div id="slide-counter" style="position: absolute; bottom: 10px; right: 15px; background: rgba(0,0,0,0.7); color: var(--accent); padding: 2px 10px; border-radius: 20px; font-size: 0.75rem;"></div>
+            </div>
+        `
+    },
+    'fan': {
+    title: "QC Inverter Fan Tester Project (Colombo International Container Terminals)",
+    content: `
+    
+    <div style="flex: 1;width: 100% display: flex; flex-direction: column; align-items: center;">
+        <img src="fan1.png" 
+             alt="Workflow Diagram" 
+             style="width: 100%; height: auto; border-radius: 8px; border: 3px solid var(--accent); object-fit: contain;">
+        <p style="font-size: 0.8rem; text-align: center; color: var(--text-dim); margin-top: 8px;">
+            Fig 1: Workflow Diagram
+        </p>
+    </div>
+
+</div>
+</div>
+        </ul>
+       
+        <h4 style="margin-top:20px;">Project Demonstration</h4>
+
+        <h5 style="margin-top:20px;">Demo of the Device</h5>
+        <div class="video-container" style="margin-top:15px; background:#000; border-radius:8px; overflow:hidden; display: flex; justify-content: center;">
+            <video controls style="width: 100%; max-height: 70vh; display: block; object-fit: contain;">
+                <source src="inverter.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        `
+},
+        };
+
+        let currentSlides = []; // Holds the images for the currently open project
+let currentSlideIdx = 0;
+
+function moveSlide(step) {
+    if (!currentSlides || currentSlides.length === 0) return;
+    
+    currentSlideIdx += step;
+    if (currentSlideIdx >= currentSlides.length) currentSlideIdx = 0;
+    if (currentSlideIdx < 0) currentSlideIdx = currentSlides.length - 1;
+
+    updateSlideDisplay();
+}
+
+function updateSlideDisplay() {
+    const imgObj = document.getElementById("active-slide-img");
+    const capObj = document.getElementById("active-slide-caption");
+    const countObj = document.getElementById("slide-counter");
+
+    if (imgObj && currentSlides[currentSlideIdx]) {
+        imgObj.src = currentSlides[currentSlideIdx].src;
+        capObj.innerText = currentSlides[currentSlideIdx].caption;
+        countObj.innerText = `${currentSlideIdx + 1} / ${currentSlides.length}`;
+    }
+}
+
+
+        function openProject(projectId) {
+            const project = projectDetails[projectId];
+            document.getElementById("modalTitle").innerText = project.title;
+            document.getElementById("modalBody").innerHTML = project.content;
+            if (project.slides) {
+        currentSlides = project.slides;
+        currentSlideIdx = 0;
+        // Small delay to let HTML inject before updating the image
+        setTimeout(updateSlideDisplay, 50);
+    } else {
+        currentSlides = []; // Clear slides for projects that don't have a gallery
+    }
+            document.getElementById("projectModal").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }  
+
+        function closeProject() {
+            document.getElementById("projectModal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                closeCV(); closeProject(); closeVideo();
+            }
+        }
+
+        // Contact Form Submission
+    </script>
+    <div id="imageModal" class="modal" style="display:none; background: rgba(0,0,0,0.9); cursor: pointer;" onclick="this.style.display='none'">
+        <span class="close" style="position: absolute; top: 20px; right: 35px; color: #64ffda; font-size: 40px;">&times;</span>
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; padding: 20px;">
+            <img id="fullImageContent" src="" style="max-width: 95%; max-height: 90vh; border: 2px solid #64ffda; border-radius: 5px; object-fit: contain;">
+        </div>
+    </div>
+</body>
+</html>
